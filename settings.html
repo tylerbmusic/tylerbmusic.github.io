@@ -1,0 +1,125 @@
+<!DOCTYPE html> 
+<head> 
+    <!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-0PFVKT55HK"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-0PFVKT55HK');
+</script>
+    <title>Settings | Tyler Bialowas' Music Page</title> <!--The title-->
+    <link rel="shortcut icon" href="favicon.png" type="image/x-8con"> <!--The icon-->
+    <link rel="stylesheet" href="page-style.css"> <!--The CSS-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="The settings page of Tyler Bialowas' Music Page. Here is where you change the settings, such as light or dark mode. Tyler Bialowas' Music Page sells music. Tyler has composed over 15 songs, and Tyler recently won the NowBeat project.">
+</head>
+<body>
+    <!--The bar at the top (The menu)-->
+    <div id="top-light">
+        <div id="left-place">
+            <a id="title-light" class="btn-light text title-active-light mmenu" href='index.html'>Tyler Bialowas</a>
+        </div>
+        <div id="right-place">
+            <br>
+            <a class="btn-light menu text menu-text mmenu" href='contact.html'>Contact</a>
+            <a class="btn-light menu text menu-text mmenu" href='music.html'>Music</a>
+            <a class="btn-light menu text menu-text mmenu" href='about.html'>About</a>
+        </div>
+            <!--Limited time sale label with a little bit of optional javascript-->
+            <div class="sale-div" onclick="this.hidden=true">
+            <a href="music.html" style="text-decoration: none;"><p class="sale-p textt"> It's Dollar June! For one month, everything's $1 OR LESS! </p></a>
+        </div>
+    </div>
+    <!--The main thing-->
+    <div id="main-part">
+        <h1 id="main-title" class="text">Settings</h1>
+        <br>
+        <p class="text" id="main-paragraph">Note: These settings use javascript to work. It also uses local storage to store the settings. This ensures your settings are saved.
+            <!--<br>
+             Also Note: This page is in its gamma phase, and may be a bit buggy, so please report all problems you find to the "Contact" page.</p>-->
+        <br>
+        <br>
+        <p id="js-test" class="text center-align">You do not have javascript enabled in your browser.</p>
+        <p id="local-storage-test" class="text center-align"></p>
+        <br>
+        <br>
+        <br>
+        <p class="setting text hiddenEl">Mode:</p>
+        <button class="setting-button hiddenEl" id="light-btn" onclick="light()">Light</button>
+        <button class="setting-button hiddenEl" id="dark-btn" onclick="dark()">Dark</button>
+        <!--Insert more settings up here.-->
+        <br>
+        <br>
+        <br>
+        <br>
+        <button class="setting-button change-btns hiddenEl" id="save-btn" onclick="location.reload()">Save Changes</button>
+        <button class="setting-button change-btns hiddenEl" id="reset-btn" onclick="reset()">Reset Settings</button>
+    </div>
+    <script>
+        //NOTE: KEEP THIS SCRIPT AT THE BOTTOM OF THE PAGE, OR IT WILL NOT WORK!
+        function light() {
+            localStorage.setItem("mode", "light");
+        };
+        function dark() {
+            localStorage.setItem("mode", "dark");
+        };
+        function reset() {
+            localStorage.clear();
+            location.reload();
+        };
+        //Script created by Tyler B. Copy it if you want to, get inspired by it, do whatever with it. I only spent a couple of weeks making it lol.
+        
+        //Here's another little thing I thought of:
+        let JS_Test = document.getElementById("js-test");
+        let LS_Test = document.getElementById("local-storage-test");
+        JS_Test.textContent = "You have javascript enabled in your browser.";
+        if (localStorage.getItem("LS")!="true") {
+            localStorage.setItem("LS","true");
+        };
+        if (localStorage.getItem("LS")=="true") {
+            LS_Test.textContent = "You have local storage enabled in your browser.";
+        } else {
+            LS_Test.textContent = "You do not have local storage enabled in your browser.";
+        }
+    </script>
+    <script>
+        if (localStorage.getItem("mode")=="dark") {
+            console.log("Dark mode is enabled.");
+            eletxt = document.querySelectorAll(".text");
+            console.log(eletxt.length);
+            for (var a = 0; a < eletxt.length; a++) {
+                eletxt[a].classList.add("dark-mode-text");
+                console.log("This is the " + a + " time.");
+            };
+            elebtn = document.querySelectorAll(".mmenu");
+            for (var a = 0; a < elebtn.length; a++) {
+                elebtn[a].classList = 'btn menu text menu-text';
+                console.log("This is the " + a + " time.");
+            };
+            document.getElementById("main-part").style.backgroundColor = "rgb(45,50,45)";
+            document.body.style.backgroundColor = "#313140"; //btn text title-active
+            document.getElementById("top-light").id = 'top';
+            document.getElementById("title-light").id = 'title';
+        } else {
+            console.log("Dark mode is not enabled.");
+        };
+    
+    
+               //Scroll animations
+               const observer = new IntersectionObserver((entries) => {
+            entries.forEach((entry) => {
+                //console.log(entry)
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('showEl');
+                } else {
+                    entry.target.classList.remove('showEl');
+                }
+            });
+        });
+    
+        const hiddenElements = document.querySelectorAll('.hiddenEl');
+        hiddenElements.forEach((el) => observer.observe(el));
+    </script>
+</body>

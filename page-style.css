@@ -1,0 +1,439 @@
+a.btn {
+    text-decoration: none;
+}
+a.btn-light {
+    text-decoration: none;
+}
+::selection { /* What happens to selected text */
+    color:rgb(0, 64, 64); 
+    background-color: rgb(255, 255, 235);
+    text-shadow: 0 0 0px !important; 
+} 
+/* width */
+::-webkit-scrollbar {
+    width: 10px;
+}
+  
+  /* Track */
+::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 2px rgb(255, 255, 255); 
+    border-radius: 5px;
+    background-color: rgba(255, 255, 255, 0.5);
+}
+  
+  /* Handle */
+::-webkit-scrollbar-thumb {
+    background: rgb(43, 43, 113); 
+    border-radius: 5px;
+}
+  
+  /* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+    background: rgb(30, 30, 100); 
+}
+
+body { /* The styles for the body */
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    background-color: #cecebf;
+}
+.btn {
+    color: rgb(210, 210, 210);
+    border-width: 2px;
+    border-style: solid;
+    border-color: rgba(255, 255, 255, 0);
+    border-radius: 10px;
+}
+.btn:hover { /*When you hover over a button, this happens */
+    color: white !important;
+    background-color: rgba(255, 255, 255, 0.1);
+    cursor: pointer;
+    border-width: 2px;
+    border-style: solid;
+    border-color: rgba(255, 255, 255, 0.1);
+    border-radius: 10px;
+}
+.btn:active {
+    color: black !important;
+    background-color: rgb(255, 255, 255) !important;
+    text-shadow: 0 0 1px !important;
+}
+.btn-light {
+    color: rgb(45, 45, 45);
+    border-width: 2px;
+    border-style: solid;
+    border-color: rgba(0, 0, 0, 0);
+    border-radius: 10px;
+}
+.btn-light:hover {
+    color: black !important;
+    background-color: rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+    border-width: 2px;
+    border-style: solid;
+    border-color: rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+}
+.btn-light:active {
+    color: white !important;
+    background-color: rgb(0, 0, 0) !important;
+    text-shadow: 0 0 1px !important;
+}
+.about-text {
+    color: white;
+}
+.text {
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    text-shadow: 0 0 1px;
+}
+.textt {
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    text-shadow: 0 0 1px;
+    color: black;
+}
+/*Menus*/
+#top {
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    margin: 0px;
+    padding: 0px;
+    width: 100%;
+    height: 70px;
+    background-color: rgb(52, 52, 74);
+    color: rgb(210, 210, 210);
+    background-image: linear-gradient(rgb(52, 52, 74), black);
+    z-index: 1;
+    vertical-align: middle;
+}
+#top-light {
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    margin: 0px;
+    padding: 0px;
+    width: 100%;
+    height: 70px;
+    background-color: rgb(52, 52, 74);
+    color: rgb(210, 210, 210);
+    background-image: linear-gradient(white, rgb(203, 203, 181));
+    z-index: 1;
+    vertical-align: middle;
+}
+#title {
+    position: flex;
+    margin-left: 0%;
+    margin-top: 0%;
+    top: 0%;
+    left: -200px;
+    font-size: 24pt !important;
+    font-weight: bold !important;
+    /*color: rgb(210,210,210);*/
+}
+#title-light {
+    left: -200px;
+    margin-left: 0% !important;
+    margin-top: 0px !important;
+    height: 10% !important;
+    top: 0% !important;
+    font-size: 24pt !important;
+    font-weight: bold !important;
+    color: black;
+}
+#title:hover {
+    color: black;
+    background-color: rgba(255, 255, 255, 0.1);
+    cursor: pointer;
+    border-width: 2px;
+    border-style: solid;
+    border-color: rgba(255, 255, 255, 0.1);
+    border-radius: 10px;
+}
+#title-light:hover {
+    color: black;
+    background-color: rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+    border-width: 2px;
+    border-style: solid;
+    border-color: rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+}
+.menu {
+    top: 0%;
+    text-shadow: 0 0 2px;
+}
+#about-menu {
+    position: absolute;
+    right: 30%;
+}
+#music-menu {
+    position: absolute;
+    right: 20%;
+}
+#contact-menu {
+    position: absolute;
+    right: 10%;
+}
+/*Main part things*/
+#main-part {
+    position: absolute;
+    top: 10%;
+    left: 10%;
+    width: 80%;
+    background-color: white;
+    z-index: 0;
+    border-radius: 0px 0px 25px 25px;
+}
+#main-title {
+    font-size: xx-large;
+    text-align: center;
+    padding-top: 5%;
+}
+#main-subtitle {
+    font-size: xx-large;
+    text-align: center;
+}
+img {
+    width: 100%;
+    margin: 0px;
+}
+#active { /*The active menu thingy*/
+    text-decoration: underline !important;
+    /*color: white;*/
+}
+.title-active { /*If the title is active*/
+    color: white;
+}
+.title-active-light {
+    color: black !important;
+}
+#main-paragraph {
+    text-align: center;
+}
+.vertical-center {
+    margin: 0;
+    position: absolute;
+    top: 50%;
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%);
+}
+#left-place {
+    position: absolute;
+    float: left;
+    left: 5%;
+    top: 14px;
+    width: 30%;
+    z-index: 100;
+}
+#right-place {
+    position: absolute;
+    float: right;
+    right: 0%;
+    top: 0px;
+    width: 30%;
+    height: 50px !important;
+    font-size: 20px;
+    margin-right: 5%;
+    z-index: 100;
+}
+.menu-text {
+    top: -5px;
+    position: relative;
+    margin-top: 0px;
+    float: right;
+    margin-left: 3%;
+    margin-right: 3%;
+}
+.about-main-part {
+    background-color: rgba(0, 0, 0, 0) !important;
+}
+.about-link {
+    color: #8e8ebe;
+}
+.about-link:active {
+    color: pink;
+}
+#about-background {
+    background: url(mewithpiano.jpg) no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+.about-main-title {
+    text-align: left !important;
+}
+.about-main-paragraph {
+    text-align: left !important;
+    width: 300px;
+}
+.sale-div {
+    position: fixed;
+    width: 36%;
+    top: 0%;
+    text-align: center;
+    font-size: 15px;
+    background-image: linear-gradient(rgb(255, 255, 193), yellow);
+    z-index: 2;
+    padding-left: 10px;
+    padding-right: 10px;
+    margin-left: 32%;
+    margin-right: 32%;
+    font-weight: bold;
+    border-radius: 0px 0px 10px 10px;
+    animation-name: sale-anim;
+    animation-duration: 5s;
+    cursor: pointer;
+}
+@keyframes sale-anim {
+    0% {font-size: 14px;}
+    25% {font-size: 16px;}
+    50% {font-size: 14px;}
+    75% {font-size: 16px;}
+    100% {font-size: 15px;}
+}
+.sale-div:hover {
+    filter: opacity(0.5);
+}
+/*.sale-p {
+    background-color: white;
+}*/
+.bnb {
+    /*box-shadow: 4px 4px 9px 2px;*/
+    background: rgb(0, 255, 0);
+    border-radius: 100px;
+    filter: hue-rotate(45deg);
+}
+/*audio {}*/
+.settings-button {
+    background: transparent;
+    border: 0px;
+    position: fixed;
+    bottom: 5%;
+    right: 5%;
+    cursor: pointer;
+    z-index: 100;
+}
+.setting{ 
+    text-align: center;
+}
+.setting-button {
+    display: block;
+    width: 100%;
+    border-width: 1px;
+    border-color: gray;
+    border-style: solid;
+    border-radius: 3px;
+    padding: 14px 28px;
+    font-size: 16px;
+    cursor: pointer;
+    text-align: center;
+}
+
+#light-btn {
+    background-color: skyblue;
+}
+#light-btn:hover {
+    background-color: rgba(135, 207, 235, 0.75);
+}
+#light-btn:active {
+    background-color: rgba(135, 207, 235, 0.25);
+}
+
+#dark-btn {
+    background-color: blue;
+}
+#dark-btn:hover {
+    background-color: rgba(0,0,255,0.75);
+}
+#dark-btn:active {
+    background-color: rgba(0,0,255,0.25);
+}
+
+.change-btns {
+    background-color: lightgrey;
+}
+.change-btns:hover {
+    background-color: rgba(211, 211, 211, 0.75);
+}
+.change-btns:active {
+    background-color: rgba(211, 211, 211, 0.25);
+}
+
+.dark-mode-text {
+    color: white;
+}
+.dark-mode-main-area {
+    background-color: black !important;
+}
+.center-align {
+    text-align: center;
+}
+#meonpiano {
+    border-radius: 0px 0px 25px 25px;
+}
+/*@media (max-width: 1000px) {
+    #title {
+        left: 0px !important;
+    }
+}*/
+@media (max-width: 700px) {
+    #top-light {
+        height: 100px !important;
+    }
+    #top {
+        height: 100px !important;
+    }
+    #title-light {
+        top: 15px !important;
+    }
+    #title {
+        top: 0px !important;
+        left: 30px;
+    }
+    /*.sale-div {
+        width: 140px;
+        left: 60px;
+    }*/
+    #main-part {
+        width: 100%;
+        left: 0%;
+    }
+}
+
+/*Nice smooth scroll animations!*/
+.hiddenEl {
+    opacity: 0;
+    /*transform: rotate3d(8, -10, -1, 115deg);*/
+    transform: translateX(-100%);
+    filter: blur(100px);
+    transition: all 0.5s;
+}
+.showEl {
+    opacity: 1;
+    /*transform: rotate3d(0, 0, 0, 0deg);*/
+    transform: translateX(0);
+    filter: blur(0);
+}
+.link {
+    color: rgb(100, 121, 255);
+}
+.link-important {
+    color: rgb(62, 186, 0);
+    font-weight: bold;
+}
+.no {
+    text-decoration: line-through;
+}
+.video {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    overflow: hidden;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-color: rgb(0, 0, 0);
+    background-attachment: fixed;
+    background-position-x: center;
+    background-position-y: center;
+}
