@@ -28,7 +28,7 @@
             <a class="btn-light menu text menu-text mmenu" href='about.html'>About</a>
         </div>
         <!--Limited time sale label with a little bit of optional javascript-->
-        <div display="none" class="sale-div" onclick="this.hidden=true">
+        <div hidden=true id="sd" class="sale-div" onclick="this.hidden=true">
             <p class="sale-p textt"> It's Dollar July! For one month, everything's $1 OR LESS! </p>
         </div>
     </div>
@@ -721,6 +721,9 @@
         if (dte == 1 && mnth == 3) {
             var irje = document.getElementById("bmp3");
             irje.play();
+        } else if (mnth == 5) {
+            var ad = document.getElementById("sd");
+            ad.hidden=false;
         } else {
             console.log("It's not April Fools day. Oh well. Roll the intro!");
         };
