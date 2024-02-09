@@ -30,8 +30,8 @@
             <a class="btn-light menu text menu-text mmenu" href='about.html'>About</a>
         </div>
             <!--Limited time sale label with a little bit of optional javascript-->
-            <div class="sale-div" onclick="this.hidden=true">
-                <a href="music.html" style="text-decoration: none;"><p class="sale-p textt"> It's Dollar July! For one month, everything's $1 OR LESS! </p></a>
+            <div class="sale-div" onclick="this.hidden=true" id="salediv">
+                <a href="music.html" style="text-decoration: none;"><p class="sale-p textt" id="saletext"> It's Dollar July! For one month, everything's $1 OR LESS! </p></a>
         </div>
     </div>
     <!--The main thing-->
@@ -42,6 +42,15 @@
         <img id="meonpiano" src="meonpiano.jpg" alt="Tyler playing the piano">
     </div>
     <script>
+        const date = new Date();
+        const month = date.getMonth();
+        if (month == 5) {
+            a = document.body.getElementById("saletext").innerText = "It's Dollar July! For one month, everything's $1 OR LESS!";
+        } else {
+            salediv.display = "none";
+        }
+            
+
         if (localStorage.getItem("mode")=="dark") {
             console.log("Dark mode is enabled.");
             eletxt = document.querySelectorAll(".text");
