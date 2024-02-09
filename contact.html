@@ -27,7 +27,7 @@
             <a class="btn-light menu text menu-text mmenu" href='music.html'>Music</a>
             <a class="btn-light menu text menu-text mmenu" href='about.html'>About</a>
         </div>
-        <div class="sale-div" onclick="this.hidden=true">
+        <div hidden=true class="sale-div" onclick="this.hidden=true">
             <a href="music.html" style="text-decoration: none;"><p class="sale-p textt"> It's Dollar June! For one month, everything's $1 OR LESS! </p></a>
         </div>
     </div>
@@ -37,6 +37,12 @@
         <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSfH-JFduxjOAONRVdTCaPMe2I89n6pH_V6tH7bLer0yake8Sw/viewform?embedded=true" width="100%" height="860px" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
     </div>
     <script>
+        d = new Date();
+        let mnth = d.getMonth();
+        if (mnth == 5) {
+            var ad = document.getElementById("sd");
+            ad.hidden=false;
+        }
         if (localStorage.getItem("mode")=="dark") {
             console.log("Dark mode is enabled.");
             eletxt = document.querySelectorAll(".text");
