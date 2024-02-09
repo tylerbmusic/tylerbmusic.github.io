@@ -30,7 +30,7 @@
             <a class="btn-light menu text menu-text mmenu" href='about.html'>About</a>
         </div>
             <!--Limited time sale label with a little bit of optional javascript-->
-            <div class="sale-div" onclick="this.hidden=true" id="salediv">
+            <div hidden=true class="sale-div" onclick="this.hidden=true" id="ad">
                 <a href="music.html" style="text-decoration: none;"><p class="sale-p textt" id="saletext"> It's Dollar July! For one month, everything's $1 OR LESS! </p></a>
         </div>
     </div>
@@ -43,11 +43,10 @@
     </div>
     <script>
         const date = new Date();
-        const month = date.getMonth();
-        if (month == 5) {
-            a = document.body.getElementById("saletext").innerText = "It's Dollar July! For one month, everything's $1 OR LESS!";
-        } else {
-            salediv.display = "none";
+        const mnth = date.getMonth();
+        if (mnth == 5) {
+            var ad = document.getElementById("sd");
+            ad.hidden=false;
         }
             
 
