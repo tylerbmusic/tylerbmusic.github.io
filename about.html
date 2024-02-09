@@ -29,7 +29,7 @@
             <a id="active" class="btn-light menu text menu-text mmenu" href='about.html'>About</a>
         </div>
         <!--Limited time sale label with a little bit of optional javascript-->
-        <div class="sale-div" onclick="this.hidden=true">
+        <div hidden=true id="sd" class="sale-div" onclick="this.hidden=true">
             <a href="music.html" style="text-decoration: none;"><p class="sale-p textt"> It's Dollar July! For one month, everything's $1 OR LESS! </p></a>
         </div>
     </div>
@@ -44,6 +44,12 @@
         </p>
     </div>
     <script>
+        d = new Date();
+        let mnth = d.getMonth();
+        if (mnth == 5) {
+            var ad = document.getElementById("sd");
+            ad.hidden=false;
+        }
         if (localStorage.getItem("mode")=="dark") {
             console.log("Dark mode is enabled.");
             eletxt = document.querySelectorAll(".text");
