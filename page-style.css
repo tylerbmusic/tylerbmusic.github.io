@@ -182,6 +182,7 @@ body { /* The styles for the body */
     background-color: white;
     z-index: 0;
     border-radius: 0px 0px 25px 25px;
+    box-shadow: 0 0 20px 0px rgba(0, 0, 0, 0.2);
 }
 #main-title {
     font-size: xx-large;
@@ -195,6 +196,9 @@ body { /* The styles for the body */
 img {
     width: 100%;
     margin: 0px;
+}
+img.image {
+    border-radius: 10px;
 }
 #active { /*The active menu thingy*/
     text-decoration: underline !important;
