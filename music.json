@@ -45,17 +45,194 @@
     },
     {
       "title":"Mystic Origins",
-      "time":"",
+      "time":"4:10",
       "instruments":"Symphony Orchestra",
-      "price":"2.99",
+      "price":"1.99",
       "mp3":"mystic_origins"
     },
     {
-      "title":"",
-      "time":"",
-      "instruments":"",
-      "price":"",
-      "mp3":""
+      "title":"A Bird's Nest",
+      "time":"3:42",
+      "instruments":"Flute, Trumpet in Bb, Tuba, Xylophone, Drumset, Piano, 4 Violas",
+      "price":"0.99",
+      "mp3":"a_birds_nest"
+    },
+    {
+      "title":"Pulse of the Cosmos",
+      "time":"5:16",
+      "instruments":"Timpani, Horn in F, Marimba, Bass Drum, Snare Drum, Hand Cymbals, Triangle",
+      "price":"1.99",
+      "mp3":"pulse_of_the_cosmos"
+    },
+    {
+      "title":"Ideas Remembered",
+      "time":"4:05",
+      "instruments":"Trumpet in Bb, Trombone, Drumset, Piano, Bass Guitar, 3 Violins",
+      "price":"1.99",
+      "mp3":"ideas_remembered"
+    },
+    {
+      "title":"Whispers in the Neon Twilight",
+      "time":"4:16",
+      "instruments":"Flute, Clarinet, Timpani, Cello",
+      "price":"1.99",
+      "mp3":"x"
+    },
+    {
+      "title":"The Dog Trots Freely In The Street",
+      "time":"5:49",
+      "instruments":"Tenor Voice, Piano",
+      "price":"2.49",
+      "mp3":"x"
+    },
+    {
+      "title":"Dance of the Dragon",
+      "time":"4:52",
+      "instruments":"Horn in F, Trumpet in Bb, Trombone, Timpani, Marimba, Hand Cymbals",
+      "price":"1.99",
+      "mp3":"x"
+    },
+    {
+      "title":"Cauda Elephanti",
+      "time":"2:00",
+      "instruments":"Horn in F, Violin",
+      "price":"0.99",
+      "mp3":"x"
+    },
+    {
+      "title":"A Summer Afternoon",
+      "time":"3:15",
+      "instruments":"Horn in F, Trumpet in Bb",
+      "price":"0.99",
+      "mp3":"asa",
+      "link":"<a class='link' href='asavideo.html' target='_parent'>Watch the NowBeat Project recording</a>",
+    },
+    {
+      "title":"Noitnevn I",
+      "time":"1:04",
+      "instruments":"Piano",
+      "price":"0",
+      "mp3":"Noitnevn I",
+      "link":"<a class='link-important' href='Noitnevn I.pdf' download>Download score PDF</a><br>"
+    },
+    {
+      "title":"Young Eagle Song",
+      "time":"2:21",
+      "instruments":"Flute, B&#9837; Trumpet, Horn in F, Trombone, Violin, Cello",
+      "price":"0.99",
+      "mp3":"Young_Eagle_Song"
+    },
+    {
+      "title":"Prelude in F Minor",
+      "time":"1:49",
+      "instruments":"Piano",
+      "price":"0.49",
+      "mp3":"Prelude_F_Minor"
+    },
+    {
+      "title":"Very Merry Calm Christmas",
+      "time":"3:11",
+      "instruments":"Piano",
+      "price":"0.99",
+      "mp3":"vmcc"
+    },
+    {
+      "title":"Berries with Dogs",
+      "time":"1:40",
+      "instruments":"Piano, Voice",
+      "price":"1.99",
+      "mp3":"Berries with Dogs"
+    },
+    {
+      "title":"Living American Male Emu",
+      "time":"0:58",
+      "instruments":"Piano",
+      "price":"0.49",
+      "mp3":"lame"
+    },
+    {
+      "title":"Independent Indri",
+      "time":"1:44",
+      "instruments":"Piano",
+      "price":"0.49",
+      "mp3":"Independent_Indri"
+    },
+    {
+      "title":"Blooming Flowers",
+      "time":"2:34",
+      "instruments":"Flute, Soprano Saxophone, Violin, Viola, Cello",
+      "price":"1.49",
+      "mp3":"Blooming_Flowers"
+    },
+    {
+      "title":"King of the Night",
+      "time":"1:22",
+      "instruments":"2 Violins, Viola, Cello",
+      "price":"0.49",
+      "mp3":"King_of_the_Night"
+    },
+    {
+      "title":"The Lake",
+      "time":"1:38",
+      "instruments":"Piano",
+      "price":"1.49",
+      "mp3":"The_Lake"
+    },
+    {
+      "title":"Bunnies and Birds in Spring",
+      "time":"1:05",
+      "instruments":"Piano, Flute",
+      "price":"0.99",
+      "mp3":"Bunnies_And_Birds_In_Spring"
+    },
+    {
+      "title":"Variations on Mary Had A Little Lamb",
+      "time":"0:54",
+      "instruments":"Piano",
+      "price":"0.49",
+      "mp3":"x"
+    },
+    {
+      "title":"Never Did Sun More Beautifully Steep",
+      "time":"0:34",
+      "instruments":"Voice, Piano",
+      "price":"0.49",
+      "mp3":"ndsmbs"
+    },
+    {
+      "title":"Morning Brass Glow",
+      "time":"2:51",
+      "instruments":"2 B&#9837; Trumpets, French Horn in F, Trombone, Tuba",
+      "price":"0.99",
+      "mp3":"MBG"
+    },
+    {
+      "title":"Morning Dawn Glow",
+      "time":"2:53",
+      "instruments":"Piano",
+      "price":"0.99",
+      "mp3":"MDG"
+    },
+    {
+      "title":"I See My Reflection",
+      "time":"3:53",
+      "instruments":"Piano",
+      "price":"0.99",
+      "mp3":"Reflection"
+    },
+    {
+      "title":"Howler Song",
+      "time":"1:33",
+      "instruments":"Piano",
+      "price":"0.49",
+      "mp3":"Howler-Song"
+    },
+    {
+      "title":"Perfect",
+      "time":"2:20",
+      "instruments":"Piano",
+      "price":"0.99",
+      "mp3":"Perfect"
     }
   ]
 }
