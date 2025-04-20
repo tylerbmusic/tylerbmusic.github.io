@@ -83,7 +83,7 @@
             fetchMusic().then(data => {
                 let ul = document.getElementById("musicUL");
                 for (let l of data.music) {
-                    let price = (l.price && l.price != "0") ? "<strong>Price:</strong> $" + price + "<br>" : (l.price) ? "<strong>Price:</strong> FREE!<br>" : "";
+                    let price = (l.price && l.price != "0") ? "<strong>Price:</strong> $" + l.price + "<br>" : (l.price) ? "<strong>Price:</strong> FREE!<br>" : "";
                     let buynow = (l.price && l.price != "0") ? `<form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_blank" style="display: inline">
                         <input type="hidden" name="cmd" value="_xclick">
                         <input type="hidden" name="business" value="PFN34G94DPARJ">
@@ -99,15 +99,16 @@
                         <input class="bnb" type="image" src="https://www.paypalobjects.com/en_US/i/btn/btn_buynow_LG.gif" border="0" name="submit" alt="PayPal - The safer, easier way to pay online!">
                         <img alt="" border="0" src="https://www.paypalobjects.com/en_US/i/scr/pixel.gif" width="1" height="1">
                     </form>` : ``;
+                    let mp3 = (l.mp3) ? `<audio controls class="audio">
+                        <source src="${l.mp3}.mp3">
+                        Your browser does not support the audio tag.
+                    </audio>` : ``;
                     let html = `<li class="scroll-el">
                     <strong>${l.title}</strong><br>
                     <strong>Time: </strong>${l.time}<br>
                     <strong>Instruments: </strong>${l.instruments}<br>
                     ${price}
-                    <audio controls class="audio">
-                        <source src="${l.mp3}.mp3">
-                        Your browser does not support the audio tag.
-                    </audio>
+                    ${mp3}
                     ${buynow}
                     ${link || ""}
                     </li>
