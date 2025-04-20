@@ -73,42 +73,47 @@
     <audio id="bmp3"><source src="b.mp3"></audio>
     <audio id="intromp3" autoplay><source src="intro.mp3"></audio>
     <script>
-        async function loadMusic() {
+        async function fetchMusic() {
             let f = await fetch('https://raw.githubusercontent.com/tylerbmusic/tylerbmusic.github.io/refs/heads/main/music.json?t=' + Date.now());
             let t = await f.text();
             let data = JSON.parse(t);
-            let ul = document.getElementById("musicUL");
-            for (let l of data.music) {
-                let price = (l.price && l.price != "0") ? "<strong>Price:</strong> $" + price + "<br>" : (l.price) ? "<strong>Price:</strong> FREE!<br>" : "";
-                let buynow = (l.price && l.price != "0") ? `<form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_blank" style="display: inline">
-                    <input type="hidden" name="cmd" value="_xclick">
-                    <input type="hidden" name="business" value="PFN34G94DPARJ">
-                    <input type="hidden" name="lc" value="US">
-                    <input type="hidden" name="item_name" value="${l.title}">
-                    <input type="hidden" name="amount" value="${l.price}">
-                    <input type="hidden" name="currency_code" value="USD">
-                    <input type="hidden" name="button_subtype" value="services">
-                    <input type="hidden" name="no_note" value="0">
-                    <input type="hidden" name="cn" value="Add special instructions to the seller:">
-                    <input type="hidden" name="no_shipping" value="2">
-                    <input type="hidden" name="bn" value="PP-BuyNowBF:btn_buynow_LG.gif:NonHosted">
-                    <input class="bnb" type="image" src="https://www.paypalobjects.com/en_US/i/btn/btn_buynow_LG.gif" border="0" name="submit" alt="PayPal - The safer, easier way to pay online!">
-                    <img alt="" border="0" src="https://www.paypalobjects.com/en_US/i/scr/pixel.gif" width="1" height="1">
-                </form>` : ``;
-                let html = `<li class="scroll-el">
-                <strong>${l.title}</strong><br>
-                <strong>Time: </strong>${l.time}<br>
-                <strong>Instruments: </strong>${l.instruments}<br>
-                ${price}
-                <audio controls class="audio">
-                    <source src="${l.mp3}.mp3">
-                    Your browser does not support the audio tag.
-                </audio>
-                ${buynow}
-                ${link || ""}
-            </li>
-            `;
-                ul.innerHTML += html;
+            return data;
+        }
+        async function loadMusic() {
+            fetchMusic().then(data => {
+                let ul = document.getElementById("musicUL");
+                for (let l of data.music) {
+                    let price = (l.price && l.price != "0") ? "<strong>Price:</strong> $" + price + "<br>" : (l.price) ? "<strong>Price:</strong> FREE!<br>" : "";
+                    let buynow = (l.price && l.price != "0") ? `<form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_blank" style="display: inline">
+                        <input type="hidden" name="cmd" value="_xclick">
+                        <input type="hidden" name="business" value="PFN34G94DPARJ">
+                        <input type="hidden" name="lc" value="US">
+                        <input type="hidden" name="item_name" value="${l.title}">
+                        <input type="hidden" name="amount" value="${l.price}">
+                        <input type="hidden" name="currency_code" value="USD">
+                        <input type="hidden" name="button_subtype" value="services">
+                        <input type="hidden" name="no_note" value="0">
+                        <input type="hidden" name="cn" value="Add special instructions to the seller:">
+                        <input type="hidden" name="no_shipping" value="2">
+                        <input type="hidden" name="bn" value="PP-BuyNowBF:btn_buynow_LG.gif:NonHosted">
+                        <input class="bnb" type="image" src="https://www.paypalobjects.com/en_US/i/btn/btn_buynow_LG.gif" border="0" name="submit" alt="PayPal - The safer, easier way to pay online!">
+                        <img alt="" border="0" src="https://www.paypalobjects.com/en_US/i/scr/pixel.gif" width="1" height="1">
+                    </form>` : ``;
+                    let html = `<li class="scroll-el">
+                    <strong>${l.title}</strong><br>
+                    <strong>Time: </strong>${l.time}<br>
+                    <strong>Instruments: </strong>${l.instruments}<br>
+                    ${price}
+                    <audio controls class="audio">
+                        <source src="${l.mp3}.mp3">
+                        Your browser does not support the audio tag.
+                    </audio>
+                    ${buynow}
+                    ${link || ""}
+                    </li>
+                    `;
+                    ul.innerHTML += html;
+                }
             }
         }
         loadMusic();
