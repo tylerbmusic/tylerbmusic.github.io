@@ -262,6 +262,7 @@ img {
     padding-left: 10px;
     width: 90% !important;
     left: 5% !important;
+    border-radius: 25px !important;
 }
 .about-link {
     color: #8e8ebe;
@@ -281,7 +282,6 @@ img {
 }
 .about-main-paragraph {
     text-align: left !important;
-    width: 300px;
 }
 .sale-div {
     position: fixed;
