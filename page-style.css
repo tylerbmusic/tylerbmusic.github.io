@@ -256,6 +256,12 @@ img {
 }
 .about-main-part {
     background-color: rgba(0, 0, 0, 0) !important;
+    backdrop-filter: blur(10px) brightness(0.8) contrast(0.85);
+    border: 1px solid gray;
+    top: 65% !important;
+    padding-left: 10px;
+    width: 90% !important;
+    left: 5% !important;
 }
 .about-link {
     color: #8e8ebe;
