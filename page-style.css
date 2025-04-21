@@ -279,6 +279,7 @@ img {
 }
 .about-main-title {
     text-align: left !important;
+    padding-top: 0 !important;
 }
 .about-main-paragraph {
     text-align: left !important;
