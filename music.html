@@ -99,7 +99,7 @@
                         <input class="bnb" type="image" src="https://www.paypalobjects.com/en_US/i/btn/btn_buynow_LG.gif" border="0" name="submit" alt="PayPal - The safer, easier way to pay online!">
                         <img alt="" border="0" src="https://www.paypalobjects.com/en_US/i/scr/pixel.gif" width="1" height="1">
                     </form>` : ``;
-                    let mp3 = (l.mp3) ? `<audio controls class="audio">
+                    let mp3 = (l.mp3 && l.mp3 != "x") ? `<audio controls class="audio">
                         <source src="${l.mp3}.mp3">
                         Your browser does not support the audio tag.
                     </audio>` : ``;
