@@ -13,7 +13,7 @@
       "instruments":"2 Flutes, 2 Oboes, 2 Clarinets, 2 Bassoons, 4 Horns in F, 2 Trumpets in Bb, 2 Trombones, Tuba, Timpani, 4 Percussion, Harp, 2 Violins, Violas, Cellos, Contrabasses",
       "price":null,
       "mp3":null,
-      "link":"<a class='link' href='https://www.youtube.com/watch?v=eSRFUFk1H5I' target='_parent'>Watch Switched</a>"
+      "link":"<a class='link' href='https://www.youtube.com/watch?v=eSRFUFk1H5I' target='_parent'>Watch Switched</a><br>"
     },
     {
       "title":"New Dawn",
@@ -105,7 +105,7 @@
       "instruments":"Horn in F, Trumpet in Bb",
       "price":"0.99",
       "mp3":"asa",
-      "link":"<a class='link' href='asavideo.html' target='_parent'>Watch the NowBeat Project recording</a>"
+      "link":"<a class='link' href='asavideo.html' target='_parent'>Watch the NowBeat Project recording</a><br>"
     },
     {
       "title":"Noitnevn I",
