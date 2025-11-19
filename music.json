@@ -3,21 +3,21 @@
     {
       "title":"Metagalactic Boulders",
       "time":"2:36",
-      "instuments":"Trumpet in C, Trumpet in Bb, Horn in F, Trombone, Tuba",
+      "instruments":"Trumpet in C, Trumpet in Bb, Horn in F, Trombone, Tuba",
       "price":"0.99",
       "mp3":"metagalactic_boulders"
     },
     {
       "title":"A New Journey",
       "time":"4:00",
-      "instuments":"Trumpet, 2 Horns in F, Piano",
+      "instruments":"Trumpet, 2 Horns in F, Piano",
       "price":"1.49",
       "mp3":"a_new_journey"
     },
     {
       "title":"Winter Reflections",
       "time":"3:00",
-      "instuments":"Flute, Clarinet, Oboe, Horn in F, Bassoon",
+      "instruments":"Flute, Clarinet, Oboe, Horn in F, Bassoon",
       "price":"0.99",
       "mp3":"winter_reflections"
     },
