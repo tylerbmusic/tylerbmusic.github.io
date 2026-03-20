@@ -7,10 +7,10 @@
   "Landing-Stats": "0.4.6",
   "Minimap": "0.1.2",
   "Model-Placer": "0.1",
-  "Sky-Dolly": "0.3",
+  "Sky-Dolly": "0.4",
   "Slew-Mode": "0.6.1",
   "Streetlights": "0.4.1",
   "Taxiway-Lights": "0.8.1",
   "Taxiway-Signs": "0.3.1",
-  "Utilities": "0.8"
+  "Utilities": "0.8.1"
 }
