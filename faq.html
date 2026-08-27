@@ -1,0 +1,165 @@
+<html>
+<head>
+    <title>Frequently Asked Questions</title>
+    <style>
+        body {
+            color: white;
+            background: #333;
+            font-family: sans-serif;
+        }
+
+        p {
+            margin-left: 2rem;
+        }
+
+        code {
+            background: #222;
+            padding: 0 5px;
+            border: 1px solid #555;
+        }
+
+        ul {
+            margin-left: 2rem;
+        }
+    </style>
+</head>
+<body>
+    <script>
+        function donate() {
+            if (document.getElementById("amount").value && document.getElementById("amount").value >= 2 && document.getElementById("amount").value <= 50000) {
+                document.getElementById("form-goes-here").innerHTML = `<form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_blank" style="display: inline">
+                    <input type="hidden" name="cmd" value="_xclick">
+                    <input type="hidden" name="business" value="PFN34G94DPARJ">
+                    <input type="hidden" name="lc" value="US">
+                    <input type="hidden" name="item_name" value="Donation">
+                    <input type="hidden" name="amount" value="${document.getElementById("amount").value || "50"}">
+                    <input type="hidden" name="currency_code" value="USD">
+                    <input type="hidden" name="button_subtype" value="services">
+                    <input type="hidden" name="no_note" value="0">
+                    <input type="hidden" name="cn" value="Add special instructions to the seller:">
+                    <input type="hidden" name="no_shipping" value="2">
+                    <input type="hidden" name="bn" value="PP-BuyNowBF:btn_buynow_LG.gif:NonHosted">
+                    <input class="bnb" type="image" src="https://www.paypalobjects.com/en_US/i/btn/btn_buynow_LG.gif" border="0" name="submit" alt="PayPal - The safer, easier way to pay online!">
+                    <img alt="" border="0" src="https://www.paypalobjects.com/en_US/i/scr/pixel.gif" width="1" height="1">
+                </form>`;
+            } else {
+                alert("Please donate a minimum of $2 and a maximum of $50,000");
+            }
+        }
+    </script>
+    <h1>Frequently Asked Questions about GGamerGGuy/Tylerbmusic's GeoFS Addons</h1>
+    <hr>
+    <h2 id="install-addons">How do I install addons?</h2>
+    <strong>Using Tampermonkey (recommended):</strong>
+    <p>
+
+        Step 1: Copy the contents of 'userscript.js' into your clipboard<br>
+        Step 2: If you haven't already, download <a href="tampermonkey.net">Tampermonkey</a><br>
+        Step 3: Press the Extensions icon on the toolbar at the top of your browser and click on the icon that looks
+        like a rounded square with two eyes at the bottom, and press "Dashboard"<br>
+        Step 4: Press the little "+" tab, delete everything in the big text box, paste your clipboard contents into that
+        text box, and press Ctrl/Cmd + S to save it. <br>
+        Step 5: Open GeoFS, and it should work!<br>
+        <br>
+        Note: When installing Tampermonkey, you may need to enable Developer Mode inside of the browser's settings, and
+        click "Allow User Scripts" in Tampermonkey's browser settings.
+    </p>
+    <strong>Using Dev Tools:</strong>
+    <p>For each addon, and each time you load or reload GeoFS,<br>
+        Step 1: Copy the contents of 'userscript.js' into your clipboard<br>
+        Step 2: Go to GeoFS and press Ctrl+Shift+I (or Cmd+Shift+I on mac). A panel should open.<br>
+        Step 3: At the top of the panel, make sure "Console" is the selected tab. If it isn't, select it by clicking on
+        it. If you don't see "Console" as an option, click the "&gt;&gt;" or
+        "+" icon, find "Console", and click it.<br>
+        Step 4: Paste the contents of your clipboard into the console.<br>
+        Once you've added all addons, close DevTools by clicking the "X" on the top right of the panel.
+    </p>
+    <strong>Using a <a href="https://en.wikipedia.org/wiki/Bookmarklet">bookmarklet</a>:</strong>
+    <p>
+        Step 1: Copy the contents of 'userscript.js' into your clipboard<br>
+        Step 2: Paste it into a bookmarklet maker (<a href="https://chriszarate.github.io/bookmarkleter/">This one</a>
+        seems to work well)<br>
+        Step 3: Add a bookmark to the page you're on (sometimes called a "favorite", depending on your browser) and
+        change the name to be the name of the addon, and the URL to be the bookmarklet maker's output<br>
+        Step 4: Each time you load or reload GeoFS, click on the bookmarklet.
+    </p>
+    <hr>
+
+    <h2 id="troubleshooting">Why isn't this addon working?</h2>
+    <p>My addons can take up to 30 seconds to load, so try waiting first.<br>
+        Many addons also have images, audio, models, etc., so a poor internet connection can also add time to load
+        (Taxiway Lights, Taxiway Signs, and Streetlights can take up to three minutes to load, depending on internet
+        connection and airspeed)<br>
+        <br>
+        If you're using Tampermonkey, when you go to GeoFS, the Tampermonkey icon should have a white number with a red
+        background that indicates how many userscripts are running<br>
+        If it doesn't have that, check that Developer Mode is enabled and "Allow User Scripts" is enabled.<br>
+        <br>
+        In rare cases, there can be compatibility issues with other addons. All of my addons were created to work with
+        each other, but sometimes someone else's addon(s) will conflict with mine.<br>
+        The only known compatibility issue is GeoFS Sky Dolly and GeoFS Livery Selector.<br>
+        <br>
+        If you've tried everything above, and the addon still isn't working, the addon may have a bug.
+    </p>
+    <hr>
+
+    <h2 id="report">How do I report a bug?</h2>
+    <p>In the addon's GitHub page, go to the "Issues" tab and create a new issue.<br>
+        <br>
+        When reporting a bug, please include:<br>
+        - A detailed description of what the bug is and how you found it (if I can't recreate the bug, I can't really
+        fix it)<br>
+        - Your browser (Edge, Chrome, Firefox, Safari, etc.), your operating system (Windows, Mac, Chrome OS, etc.)<br>
+        - Your GeoFS version number<br>
+        - Any other relevant details
+    </p>
+    <hr>
+    <h2 id="usage">How do I use this addon?</h2>
+    <p>If the addon has a README.md, refer to that for usage instructions.<br><br>
+        Many of my addons use a shared addon menu for settings and customizatinon. To access that menu, go to GeoFS and
+        look for an "ADDON SETTINGS" button at the bottom. Click that button to open a settings panel. From there, you
+        can enable and disable addons, chane settings, and view and change keyboard shortcuts.<br><br>
+        If the addon has no README.md and no addon menu, try doing what you think it does (e.g., try landing when using
+        Landing Stats).
+    </p>
+    <hr>
+    <h2 id="udpating">How do I update this addon?</h2>
+    <p>Go to the addon's GitHub page, click on "userscript.js", copy the code, then go to Tampermonkey's Dashboard, click on the addon, press Ctrl+A (or Cmd+A on Mac) to select all, and paste in the updated code.</p>
+    <hr>
+    <h2 id="safety">How do I know this addon is safe?</h2>
+    <p>An easy way to check if a userscript is dangerous is to copy the code, paste it into an AI chatbot, and ask the AI, "Is this script safe? What exactly does it do?"<br>
+        If you don't have access to AI chatbots (or don't trust them), some red flags to look for are:
+    </p>
+    <ul>
+        <li><a href="https://en.wikipedia.org/wiki/Obfuscation_(software)">Obfuscated code</a></li>
+        <li>URLs inside of code (specifically look for <code>eval</code> and <code>fetch</code>, and make sure those URLs are also safe)</li>
+        <li>Anything in the code that feels like it really doesn't belong to the addon</li>
+        <li>Long sections of random letters and numbers</li>
+    </ul>
+    <p>
+        When checking URLs to make sure they're safe, it would be best to use a burner device (a device that wouldn't cause you trouble if it were destroyed) and/or a VPN. If the URL shows nothing, that's a pretty big red flag. If the URL has code, check to see if that code is safe as well. If the URL is an image, it's probably safe.<br>
+        <br>
+        I try to keep all code readable and (relatively) simple, so beginner programmers (and AI chatbots) can understand what the code does. I also try to make it clear and descriptive, and will never obfuscate or <a href="https://en.wikipedia.org/wiki/Minification_(programming)">minify</a> any userscripts.
+    </p>
+    <hr>
+    <h2 id="tracking">Why is "track.tylerbialowas-bard.workers.dev" in some of the addons? What does it do?</h2>
+    <p>As the comments above that chunk of code suggest, that URL is a <a href="https://workers.cloudflare.com/">Cloudflare Worker</a>. Its main purpose is to track how many times people have loaded/reloaded GeoFS with that addon enabled in the last 24 hours and the last 30 days, and to keep track of how many "unique users" that addon has.<br>
+        Most developers would call this "usage statistics", but when creating the Worker I thought of it as anonymous "tracking". It does not actually "track" you or store any info about you. I've been adding it to addons mainly out of curiosity (and so that if anyone asks how popular my addons are, I can actually give a good estimate).<br>
+        <strong>I will never sell any collected data. I will never sell, share, or store any personal info, identifying information, or anything about you that's worth selling.</strong> If you don't believe me, or are still skeptical, you can always opt-out by following the instructions in the code.<br>
+        I do not make any money from this. I also do not pay any money for this. There is no point in trying to overload the servers or fake information (and no, it's not funny, either).<br>
+        <br>
+        In addons with automatic update notifications, there is also this line inside the <code>checkForUpdates()</code> function:<br>
+        <code>await fetch(`https://track.tylerbialowas-bard.workers.dev?event=${LSNAME}v${VERSION}`, {method: "HEAD"})</code><br>
+        This lets me (and only me) know how long it takes people to update my addons.<br>
+        <br>
+        If you want to see the statistics for yourself, go to <a href="https://tylerbmusic.github.io/stats">https://tylerbmusic.github.io/stats</a>, or view it unformatted at <a href="https://track.tylerbialowas-bard.workers.dev">https://track.tylerbialowas-bard.workers.dev</a>.
+    </p>
+    <!--<hr>
+    <h2 id="donate">How can I donate?</h2>
+    <p>You can donate via PayPal by choosing an amount, clicking "Submit", and clicking the "Buy Now" button that appears.<br>
+        Donation amount: $<input type="number" id="amount"> USD<br>
+        <button onclick="donate()">Submit</button><br>
+        <div id="form-goes-here"></div>
+    </p>-->
+</body>
+</html>
